@@ -7,8 +7,8 @@ from datetime import datetime
 
 class Payments(Base):
     __tablename__ = 'payments'
-
-    booking_id = Mapped[int] = mapped_column(ForeignKey("Booking.id"))
+    booking_id = Mapped[int] = mapped_column(ForeignKey("bookings.id",ondelete="SET NULL"))
     payment_date = Mapped[datetime] = mapped_column(TIMESTAMP(timezone=True), nullable=False)
-    amount = Mapped[float] = mapped_column(DECIMAL(5,2))
-    payment_method = Mapped[str] = mapped_column(String(55))
+    amount = Mapped[float]
+    payment_method = Mapped[str]
+    status = Mapped[str]
