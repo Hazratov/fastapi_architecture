@@ -15,9 +15,9 @@ class Settings(BaseSettings):
     POSTGRES_PORT: str
     POSTGRES_DB: str
 
-    model_config = SettingsConfigDict(env_file=".env")
+    model_config = SettingsConfigDict(env_file="app/.env")
 
 
 @cache
-def get_settings() -> Settings:
+def get_settings() -> Setngs:
     return Settings()
