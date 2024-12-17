@@ -19,5 +19,5 @@ class Settings(BaseSettings):
 
 
 @cache
-def get_settings() -> Setngs:
+def get_settings() -> Settings:
     return Settings()
