@@ -1,4 +1,4 @@
-# fastapi_architecture
+# fastapi_hotel
 
 alembic o'rnatish steplari:
 1) pip install alembic
