@@ -1,7 +1,10 @@
-from sqlalchemy.orm import Declarative_base
+from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped, mapped_column
-from sqlalchemy import BIGINT  
+from sqlalchemy import BIGINT
 
-class Base(Declarative_base):
-    id = Mapped[int] = mapped_column(BIGINT(55), primary_key=True)
+
+class Base(DeclarativeBase):
+    __abstract__ = True
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
 
