@@ -14,3 +14,5 @@ class AuthRepository:
         await self.session.execute(stat)
         await self.session.commit()
 
+    async def check_exist_user(self, username: str) -> bool:
+        pass
