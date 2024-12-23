@@ -12,3 +12,6 @@ class AuthController:
         data.password = bcrypt.hash(data.password)
         return await self.auth_repo.create_user(data=data.model_dump())
     
+    async def check_user(self,):
+        pass
+    
