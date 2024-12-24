@@ -1,13 +1,20 @@
 from pydantic import BaseModel
 
 
+class TokenSchema(BaseModel):
+    pass
+
+
 class authSchema(BaseModel):
     username: str
     password: str
     first_name: str
     last_name: str
     email: str
-    is_staff : bool
-    is_active: bool
-    is_superuser: bool
+    is_staff: bool = False
+    is_active: bool = True
+    is_superuser: bool = False
 
+
+class User(authSchema):
+    id: int
